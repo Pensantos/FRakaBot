@@ -6,16 +6,16 @@ local UPDATE_PATH = "/Pensantos/FRakaBot/master/Frakabot.lua".."?rand="..math.ra
 local UPDATE_FILE_PATH = SCRIPT_PATH.."FrakaBot.lua"
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
-function _AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>SorakaBot by szczurekPROS:</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
+function _AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>RakaBot</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
 if AUTOUPDATE then
-        local ServerData = GetWebResult(UPDATE_HOST, "/szczurekPROS/GitHub/master/scripts/Version/sorakabotfree.version")
+        local ServerData = GetWebResult(UPDATE_HOST, "/Pensantos/FRakaBot/master/ver")
         if ServerData then
                 ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
                 if ServerVersion then
                         if tonumber(version) < ServerVersion then
-                                _AutoupdaterMsg("New version available"..ServerVersion)
-                                _AutoupdaterMsg("Updating, please don't press F9")
-                                DelayAction(function() DownloadFile(UPDATE_URL, UPDATE_FILE_PATH, function () _AutoupdaterMsg("Successfully updated. ("..version.." => "..ServerVersion.."), press F9 twice to load the updated version.") end) end, 3)
+                                _AutoupdaterMsg("Nova versão disponivel"..ServerVersion)
+                                _AutoupdaterMsg("Atualizando!")
+                                DelayAction(function() DownloadFile(UPDATE_URL, UPDATE_FILE_PATH, function () _AutoupdaterMsg("Atualizado! ("..version.." => "..ServerVersion.."), press F9 twice to load the updated version.") end) end, 3)
                         else
                                 _AutoupdaterMsg("You have got the latest version ("..ServerVersion..")")
                         end
@@ -27,7 +27,7 @@ end
 
 --[[AUTO UPDATE END]]--
 
-    welcome = "Welcome to SorakaBot version 2.4 by szczurekPROS"
+    welcome = "Por szczurekPROS, modificado por Pensantos!"
     --[[
     SorakaBot V2.4 by szczurekPROS
     GPL v2 license
