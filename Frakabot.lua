@@ -1,9 +1,9 @@
-local version = "2.4"
+local version = "0.0"
 
 local AUTOUPDATE = true
 local UPDATE_HOST = "raw.github.com"
-local UPDATE_PATH = "/szczurekPROS/GitHub/master/scripts/SorakaBot by szczurekPROS.lua".."?rand="..math.random(1,10000)
-local UPDATE_FILE_PATH = SCRIPT_PATH.."SorakaBot by szczurekPROS.lua"
+local UPDATE_PATH = "/Pensantos/FRakaBot/master/Frakabot.lua".."?rand="..math.random(1,10000)
+local UPDATE_FILE_PATH = SCRIPT_PATH.."FrakaBot.lua"
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
 function _AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>SorakaBot by szczurekPROS:</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
