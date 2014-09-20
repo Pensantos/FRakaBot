@@ -1,0 +1,26 @@
+t=false
+tempo=0
+if InFountain() then
+  If t == false then
+    tempo = GetIngameTimer() +120
+    t= true
+  end
+  if tempo == GetIngameTimer() then
+        anterior=followTarget.charName
+    	 z=1
+		 while AIData.allies[z].charName=="Soraka" or AIData.allies[z].charName==anterior do
+		   z=z+1
+		  end
+          followTarget = AIData.allies[x]
+                                                            action = decide()
+                                                            actionTimer = action()
+                                                            brainTimer = AITimer.add(0.125,function()
+                                                                            local candidate = decide()
+                                                                            if action ~= candidate then
+                                                                                    AITimer.remove(actionTimer)
+                                                                                    action = candidate
+                                                                                    actionTimer = action()
+                                                                            end
+																																end)
+    end
+end
